@@ -33,7 +33,7 @@ Example: `1`
 steps:
   - label: ":buildkite: Test Plugin"
     plugins:
-      - test#v0.0.1: ~
+      - lelia/test#v0.0.1:
           bool_param: false
           str_param: "hello-world"
           int_param: 7

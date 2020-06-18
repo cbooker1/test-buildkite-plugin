@@ -9,6 +9,6 @@ services:
 
   lint:
     image: buildkite/plugin-linter
-    command: ['--id', "ssh://git@github.com:lelia/test-buildkite-plugin"]
+    command: ['--id', "lelia/test"]
     volumes:
       - ".:/plugin"
