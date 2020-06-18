@@ -1,0 +1,19 @@
+agents:
+  queue: docker
+
+steps:
+
+  - label: ":shell: Shellcheck"
+    plugins:
+      shellcheck#v1.1.2:
+        files: hooks/**
+
+  - label: ":sparkles: Lint"
+    plugins:
+      plugin-linter#v2.0.0:
+        id: ssh://git@github.com:lelia/test-buildkite-plugin
+
+  - label: ":docker: Tests"
+    plugins:
+      docker-compose#v3.0.2:
+        run: tests
