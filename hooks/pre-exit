@@ -3,3 +3,11 @@
 set -euo pipefail
 
 echo "This is the pre-exit hook!"
+
+if [[ -n "${BUILDKITE_PLUGIN_TEST_STR_PARAM:-}" ]]; then
+    echo "String parameter: ${BUILDKITE_PLUGIN_TEST_STR_PARAM}"
+fi
+
+if [[ -n "${BUILDKITE_PLUGIN_TEST_INT_PARAM:-}" ]]; then
+    echo "Integer parameter: ${BUILDKITE_PLUGIN_TEST_INT_PARAM}"
+fi
