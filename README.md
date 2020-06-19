@@ -43,6 +43,12 @@ steps:
 
 ## Developing
 
+To run the plugin linter:
+
+```bash
+docker-compose run --rm lint
+```
+
 To run the plugin tests:
 
 ```bash
