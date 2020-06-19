@@ -7,6 +7,6 @@ echo "This is the command hook!"
 if [[ -n "${BUILDKITE_PLUGIN_TEST_BOOL_PARAM:-}" ]]; then
     echo "Boolean parameter: ${BUILDKITE_PLUGIN_TEST_BOOL_PARAM}"
 else
-    echo "Missing required parameter: `bool_param`"
+    echo "Missing required parameter: bool_param"
     exit 1
 fi

@@ -21,6 +21,6 @@ setup() {
 
     assert_failure
     assert_output --partial "This is the command hook!"
-    assert_output --partial "Missing required parameter: `bool_param`"
+    assert_output --partial "Missing required parameter: bool_param"
     refute_output --partial "Boolean parameter: ${BUILDKITE_PLUGIN_TEST_BOOL_PARAM}"
 }
