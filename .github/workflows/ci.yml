@@ -37,9 +37,9 @@ jobs:
     # uses: -> plugins:
       uses: ludeeus/action-shellcheck@0.2.1
 
-  test:
-    runs-on: ubuntu-18.04
-    steps:
-    - name: 🐳 tests
-      uses: actions/checkout@v2
-      run: docker-compose run --rm tests
+  # test:
+  #   runs-on: ubuntu-18.04
+  #   steps:
+  #   - name: 🐳 tests
+  #     uses: actions/checkout@v2
+  #     run: docker-compose run --rm tests
