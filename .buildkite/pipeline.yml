@@ -1,3 +1,10 @@
+# .buildkite/pipeline.yml
+#
+# Test Buildkite Plugin
+# Buildkite Pipeline Workflow
+#
+# @author lelia
+
 agents:
   queue: docker
 

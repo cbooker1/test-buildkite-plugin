@@ -1,5 +1,7 @@
 # test-buildkite-plugin
 
+![Build Status](https://github.com/lelia/test-buildkite-plugin/workflows/CI/badge.svg?branch=master)
+
 A public repository for testing the CI build process for Buildkite plugins.
 
 ## Requirements
