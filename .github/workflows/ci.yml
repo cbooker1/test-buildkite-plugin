@@ -24,10 +24,11 @@ jobs:
     # steps: -> steps:
     steps:
 
+    # uses: -> plugins:
+    - uses: actions/checkout@v2
+
     # name: -> label:
     - name: ✨ lint
-    # uses: -> plugins:
-      uses: actions/checkout@v2
     # run: -> command:
       run: docker-compose run --rm lint
 
@@ -40,5 +41,5 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - name: 🐳 tests
-      run: docker-compose run --rm tests
       uses: actions/checkout@v2
+      run: docker-compose run --rm tests
