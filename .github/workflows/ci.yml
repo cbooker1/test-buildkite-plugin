@@ -18,24 +18,18 @@ jobs:
   # action name
   lint:
 
-    # runs-on: -> agents: queue:
     runs-on: ubuntu-18.04
-
-    # steps: -> steps:
+    
     steps:
 
-    # uses: -> plugins:
     - uses: actions/checkout@v2
 
-    # name: -> label:
     - name: ✨ lint
-    # run: -> command:
       run: docker-compose run --rm lint
-
-    # name: -> label:
+      
     - name: 🐚 shellcheck
-    # uses: -> plugins:
       uses: ludeeus/action-shellcheck@0.2.1
+      ignore: tests
 
   test:
     runs-on: ubuntu-18.04
