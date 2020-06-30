@@ -29,7 +29,8 @@ jobs:
       
     - name: 🐚 shellcheck
       uses: ludeeus/action-shellcheck@0.2.1
-      ignore: tests
+      with:
+        ignore: tests
 
   test:
     runs-on: ubuntu-18.04
