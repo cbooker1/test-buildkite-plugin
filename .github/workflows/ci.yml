@@ -1,35 +1,27 @@
-# .github/ci.yml
-#
 # Test Buildkite Plugin
 # Github Actions Workflow
-#
-# @author lelia
 
-# workflow name
 name: CI
 
-# replaces webhook
 on:
-  [ push,pull_request ]
+  [ push, pull_request ]
 jobs:
   lint:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v2
-      
-    - name: ✨ lint
-      run: docker-compose run --rm lint
+      - uses: actions/checkout@v2
 
-    - name: 🐚 shellcheck
-      uses: ludeeus/action-shellcheck@0.2.1
-      with:
-        ignore: tests # can be removed since shellcheck should ignore bats regardless
-        
+      - name: ✨ lint
+        run: docker-compose run --rm lint
+
+  shellcheck:
+      - name: 🐚 shellcheck
+        uses: ludeeus/action-shellcheck@0.2.1
+        with:
+
   test:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v2
-    - name: 🐳 tests
-      run: docker-compose run --rm tests
-      
-# Wait + kick off workflows
+      - uses: actions/checkout@v2
+      - name: 🐳 tests
+        run: docker-compose run --rm tests
