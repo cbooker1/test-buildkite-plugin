@@ -15,9 +15,10 @@ jobs:
         run: docker-compose run --rm lint
 
   shellcheck:
+      runs-on: ubuntu-18.04
+      steps:
+      - uses: ludeeus/action-shellcheck@0.2.1
       - name: 🐚 shellcheck
-        uses: ludeeus/action-shellcheck@0.2.1
-        with:
 
   test:
     runs-on: ubuntu-18.04
