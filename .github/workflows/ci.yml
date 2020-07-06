@@ -16,8 +16,9 @@ jobs:
   shellcheck:
     runs-on: ubuntu-18.04
     steps:
-      - uses: ludeeus/action-shellcheck@0.2.1
       - name: 🐚 shellcheck
+        uses: ludeeus/action-shellcheck@0.4.0
+
 
   test:
     runs-on: ubuntu-18.04
