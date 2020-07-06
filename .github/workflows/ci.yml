@@ -10,13 +10,12 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-
       - name: ✨ lint
         run: docker-compose run --rm lint
 
   shellcheck:
-      runs-on: ubuntu-18.04
-      steps:
+    runs-on: ubuntu-18.04
+    steps:
       - uses: ludeeus/action-shellcheck@0.2.1
       - name: 🐚 shellcheck
 
